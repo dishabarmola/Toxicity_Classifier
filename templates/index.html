@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Comment Classifier</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="form-box">
+        <h2>Comment Toxicity Classification</h2>
+        <form action="/predict" method="post">
+            <textarea name="comment" placeholder="Enter your comment here..."></textarea>
+            <br>
+            <button type="submit">Classify</button>
+        </form>
+       
+            <div class="result">
+                Prediction: {{ prediction }}
+            </div>
+    
+        
+    </div>
+</body>
+</html>
